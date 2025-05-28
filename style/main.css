@@ -95,7 +95,8 @@ p {
 .container-1370 {
   max-width: 1410px;
   /* 1370+2*20*/
-  width: stretch; /* взамен width: 100%; */
+  width: stretch;
+  /* взамен width: 100%; */
   margin: 0 auto;
   padding: 20px;
 }
@@ -105,3 +106,11 @@ body {
 }
 
 /* #endregion Общие стили */
+
+/* #region Header */
+.header h1 {
+  font-size: 65px;
+  font-weight: 700;
+  color: #01996d;
+}
+/* #endregion */
