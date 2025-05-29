@@ -97,7 +97,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.container-1920w {
+.container-w1920 {
   max-width: 1950px;
   /* 1920+2*15*/
 
@@ -108,7 +108,7 @@ body {
   padding: 0 15px;
 }
 
-.container-1370w {
+.container-w1370 {
   max-width: 1400px;
   /* 1370+2*15*/
 
@@ -121,9 +121,9 @@ body {
 
 /* #endregion Общие стили */
 
-/* #region Header */
+/* #region Section-01 */
 
-.header-content {
+.section-01__content {
   padding-top: 175px;
   min-height: 895px;
   background-image: url(../img/header.png);
@@ -137,7 +137,7 @@ body {
 
 }
 
-.header h1 {
+.section-01__content h1 {
   font-size: 65px;
   font-weight: bold;
   font-family: Georgia, serif;
@@ -147,7 +147,7 @@ body {
   margin-top: 0;
 }
 
-.header p {
+.section-01__content p {
   font-size: 20px;
   max-width: 420px;
   color: #484848;
@@ -155,7 +155,7 @@ body {
   margin-bottom: 18px;
 }
 
-.header button {
+.section-01__content button {
   width: 227px;
   height: 65px;
   border-radius: 4px;
@@ -171,7 +171,7 @@ body {
   color: #fff;
 }
 
-/* #endregion Header */
+/* #endregion Section-01 */
 
 /* #region Footer */
 .footer {}
@@ -181,32 +181,34 @@ body {
   padding: 95px 0;
 }
 
-.logo {
+.footer__logo {
   margin-bottom: 60px;
 }
 
-.footer ul li a {
+.footer__nav {}
+
+.footer__nav ul li a {
   color: #fff;
   font-size: 25px;
   text-decoration: none;
   /*margin-bottom: 60px; /~ у ссылок margin-bottom не сработал, поэтому мы его укажем для li ~/*/
 }
 
-.footer ul li a:hover {
+.footer__nav ul li a:hover {
   opacity: 0.8;
 }
 
-.footer ul {
+.footer__nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer ul li {
+.footer__nav ul li {
   margin-bottom: 60px;
 }
 
-.footer ul li:last-child {
+.footer__nav ul li:last-child {
   margin-bottom: 0;
 }
 
