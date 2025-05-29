@@ -92,25 +92,123 @@ p {
 /* #endregion Шрифты */
 
 /* #region Общие стили */
-.container-1370 {
-  max-width: 1410px;
-  /* 1370+2*20*/
-  width: stretch;
-  /* взамен width: 100%; */
-  margin: 0 auto;
-  padding: 20px;
-}
 
 body {
   font-family: "Lato", sans-serif;
 }
 
+.container-1920w {
+  max-width: 1950px;
+  /* 1920+2*15*/
+
+  width: stretch;
+  /* взамен width: 100%; */
+
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-1370w {
+  max-width: 1400px;
+  /* 1370+2*15*/
+
+  width: stretch;
+  /* взамен width: 100%; */
+
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 /* #endregion Общие стили */
 
 /* #region Header */
+
+.header-content {
+  padding-top: 175px;
+  min-height: 895px;
+  background-image: url(../img/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Фон заполнит всю доступную ширину */
+
+  /*background-position: center top; /~ горизонтально по центру, вертикально сверху ~/*/
+  background-position-x: center;
+  background-position-y: top;
+
+}
+
 .header h1 {
   font-size: 65px;
-  font-weight: 700;
+  font-weight: bold;
+  font-family: Georgia, serif;
+  /* Georgia мы не подключали, он должен быть сразу в компе пользователя, а serif это стандартный самый простой шрифт с засечками, который применится если шрифт Georgia не сработает */
   color: #01996d;
+  max-width: 440px;
+  margin-top: 0;
 }
-/* #endregion */
+
+.header p {
+  font-size: 20px;
+  max-width: 420px;
+  color: #484848;
+  height: 123px;
+  margin-bottom: 18px;
+}
+
+.header button {
+  width: 227px;
+  height: 65px;
+  border-radius: 4px;
+  padding: 20px 40px;
+  background-color: #01996D;
+  border: none;
+  cursor: pointer;
+
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  color: #fff;
+}
+
+/* #endregion Header */
+
+/* #region Footer */
+.footer {}
+
+.footer-content {
+  background-color: #245852;
+  padding: 95px 0;
+}
+
+.logo {
+  margin-bottom: 60px;
+}
+
+.footer ul li a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  /*margin-bottom: 60px; /~ у ссылок margin-bottom не сработал, поэтому мы его укажем для li ~/*/
+}
+
+.footer ul li a:hover {
+  opacity: 0.8;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 60px;
+}
+
+.footer ul li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* #endregion Footer */
