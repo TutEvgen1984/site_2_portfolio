@@ -121,6 +121,57 @@ body {
 
 /* #endregion Общие стили */
 
+/* #region Header */
+.header {}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 85px;
+}
+
+.header__top-logo {}
+
+/* #region header__nav */
+.header__nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.header__nav ul a {
+  text-decoration: none;
+}
+
+/* #endregion header__nav */
+
+/* #region auth-block */
+.auth-block__sing-in {
+  text-decoration: none;
+}
+
+.header--auth-block {}
+
+.auth-block__trial-btn {
+  width: 183px;
+  height: 51px;
+  border-radius: 4px;
+  background-color: #01996D;
+  border: none;
+  cursor: pointer;
+
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  color: #fff;
+}
+
+/* #endregion auth-block */
+
+
+/* #endregion Header */
+
 /* #region Section-01 */
 
 .section-01__content {
