@@ -97,7 +97,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.container-w1920 {
+.container-w1920--common {
   max-width: 1920px;
 
   width: stretch;
@@ -106,11 +106,11 @@ body {
   margin: 0 auto;
 }
 
-.container-w1370 {
+.container-w1370--common {
   max-width: 1400px;
   /* 1370+2*15*/
 
-  width: stretch;
+  /* width: stretch; */
   /* взамен width: 100%; */
 
   margin: 0 auto;
@@ -239,7 +239,6 @@ body {
   width: 227px;
   height: 65px;
   border-radius: 4px;
-  padding: 20px 40px;
   background-color: #01996D;
   border: none;
   cursor: pointer;
@@ -252,6 +251,61 @@ body {
 }
 
 /* #endregion Section-01 */
+
+/* #region Section-02 */
+.section-02 {}
+
+.section-02--content {
+    padding: 168px 0;
+}
+
+.section--How-it-works {
+
+}
+
+.section--How-it-works__title-01 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 157%;
+  color: #424242;
+}
+
+.section--How-it-works__flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.section--How-it-works__title-02 {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 157%;
+  color: #01996d;
+  max-width: 585px;
+}
+
+.section--How-it-works__p {
+  max-width: 655px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #424242;
+  padding-top: 22px;
+  padding-left: 5px;
+  letter-spacing: 0.1px;
+}
+
+.section-02--content--bottom {}
+
+.section-02--content--bottom__item-01 {}
+
+.section-02--content--bottom__item-02 {}
+
+.section-02--content--bottom__item-03 {}
+
+/* #endregion Section-02 */
 
 /* #region Footer */
 .footer {}
