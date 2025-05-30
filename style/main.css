@@ -98,14 +98,12 @@ body {
 }
 
 .container-w1920 {
-  max-width: 1950px;
-  /* 1920+2*15*/
+  max-width: 1920px;
 
   width: stretch;
   /* взамен width: 100%; */
 
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .container-w1370 {
@@ -129,32 +127,61 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 85px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.header__top-logo {}
+.header__top-logo {
+  margin-right: 15px;
+}
 
 /* #region header__nav */
-.header__nav ul {
-  display: flex;
-  list-style: none;
+
+.header__nav {
+  max-width: 686px;
+  width: 100%;
+  padding-right: 115px;
+
 }
 
-.header__nav ul a {
+.header__nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding-left: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__nav-a {
   text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  color: #292929;
+  padding-right: 15px;
 }
 
 /* #endregion header__nav */
 
 /* #region auth-block */
-.auth-block__sing-in {
-  text-decoration: none;
+.header--auth-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
 }
 
-.header--auth-block {}
+.auth-block__sing-in {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  margin-right: 22px;
+}
 
 .auth-block__trial-btn {
   width: 183px;
-  height: 51px;
+  height: 52px;
   border-radius: 4px;
   background-color: #01996D;
   border: none;
@@ -165,6 +192,7 @@ body {
   font-size: 20px;
   line-height: 125%;
   color: #fff;
+  padding-top: 5px;
 }
 
 /* #endregion auth-block */
@@ -196,14 +224,15 @@ body {
   color: #01996d;
   max-width: 440px;
   margin-top: 0;
+  margin-bottom: 33px;
 }
 
 .section-01__content p {
   font-size: 20px;
   max-width: 420px;
   color: #484848;
-  height: 123px;
-  margin-bottom: 18px;
+  line-height: 145%;
+  margin-bottom: 52px;
 }
 
 .section-01__content button {
