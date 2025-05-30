@@ -260,7 +260,7 @@ body {
 }
 
 .section--How-it-works {
-
+  margin-bottom: 53px;
 }
 
 .section--How-it-works__title-01 {
@@ -297,13 +297,70 @@ body {
   letter-spacing: 0.1px;
 }
 
-.section-02--content--bottom {}
+.section-02--3-blocks {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
-.section-02--content--bottom__item-01 {}
+.section-02--3-blocks__block-01 {
+  max-width: 400px;
+}
 
-.section-02--content--bottom__item-02 {}
+.group-01 {
+  display: flex;
+  margin-bottom: 10px;
 
-.section-02--content--bottom__item-03 {}
+}
+
+.group-01__h1 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 150px;
+  line-height: 150%;
+  color: rgba(1, 153, 109, 0.2);
+  align-content: baseline;
+}
+
+.group-01__h4 {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  color: #000;
+  align-content: end;
+
+  /* смещение */
+  position: relative;
+  left: -68px;
+  bottom: 46px;
+}
+
+.item-01--p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #424242;
+
+  letter-spacing: 0.15px;
+  margin-bottom: 59px;
+}
+
+.item-01--img {
+
+}
+
+.section-02--3-blocks__block-02 {
+
+}
+
+.section-02--3-blocks__block-03 {
+
+}
+
+
+
+
 
 /* #endregion Section-02 */
 
