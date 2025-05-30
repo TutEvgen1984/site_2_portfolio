@@ -28,7 +28,6 @@ p {
 
 /* #region Шрифты */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* .lato-thin {
   font-family: "Lato", sans-serif;
   font-weight: 100;
@@ -287,24 +286,28 @@ body {
 }
 
 .section--How-it-works__p {
-  max-width: 655px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
   font-weight: 500;
+
+  max-width: 660px;
   font-size: 20px;
   line-height: 150%;
   color: #424242;
   padding-top: 22px;
-  padding-left: 5px;
-  letter-spacing: 0.1px;
+  padding-left: 10px;
+  letter-spacing: 0.15px;
 }
 
 .section-02--3-blocks {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .section-02--3-blocks__block-01 {
-  max-width: 400px;
+  width: 390px;
 }
 
 .group-01 {
@@ -351,11 +354,27 @@ body {
 }
 
 .section-02--3-blocks__block-02 {
+  padding-top: 286px;
+    width: 390px;
+}
 
+.group-02__h4 {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  color: #000;
+  align-content: end;
+
+  /* смещение */
+  position: relative;
+  left: -95px;
+  bottom: 46px;
+  text-wrap: nowrap;
 }
 
 .section-02--3-blocks__block-03 {
-
+  padding-top: 55px;
 }
 
 
