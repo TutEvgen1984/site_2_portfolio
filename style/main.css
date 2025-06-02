@@ -490,8 +490,7 @@ body {
 .section-03 {}
 
 .section-03--background-block {
-  /* background-color: #245852; */
-  background-color: aqua;
+  background-color: #245852;
   min-height: 922px;
 }
 
@@ -563,6 +562,39 @@ body {
 /* #region section-04 */
 
 /* #endregion section-04 */
+.section-04 {
+
+}
+
+.section-04--content {
+  padding-top: 120px;
+  min-height: 1000px;
+}
+
+.s04--content-left {
+
+}
+
+.s04--content-right {
+
+}
+
+.s04--content-right__h3 {
+
+}
+
+.s04--content-right__h1 {
+
+}
+
+.s04--content-right__p {
+
+}
+
+.s04--content-right__btn {
+
+}
+
 
 /* #region Footer */
 .footer {}
