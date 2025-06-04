@@ -130,6 +130,14 @@ body {
   font-size: 20px;
   line-height: 125%;
   color: #fff;
+
+  transition-property: transform;
+  transition-duration: 0.3s
+}
+
+.btn--find-your-way--common:hover,
+.btn--find-your-way--common:focus {
+  transform: scale(110%);
 }
 
 /* #endregion Общие стили */
@@ -146,16 +154,44 @@ body {
   gap: 15px;
 }
 
-.header__top-logo {
+.logo-bg {
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
   margin-right: 15px;
 }
+
+.logo-bg::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background-color: transparent;
+
+  transition-property: all;
+  transition-duration: 0.4s;
+}
+
+.logo-bg:hover:after {
+  background-color: #01996d;
+  width: 83px;
+}
+
+.header__top-logo {}
+
+.header__top-logo:hover,
+.header__top-logo:focus {
+  opacity: 0.7;
+}
+
 
 /* #region header__nav */
 
 .header__nav {
   max-width: 686px;
   width: 100%;
-  padding-right: 115px;
+  padding-right: 118px;
 
 }
 
@@ -173,7 +209,34 @@ body {
   font-weight: 500;
   font-size: 20px;
   color: #292929;
-  padding-right: 15px;
+
+  display: block;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.header__nav-a:hover,
+.header__nav-a:focus {
+
+  background-color: #01996d;
+  color: #fff;
+
+}
+
+.header__nav--li-01 {
+  margin-left: -7px;
+}
+
+.header__nav--li-02 {
+  margin-left: 0px;
+}
+
+.header__nav--li-03 {
+  margin-left: 0px;
+}
+
+.header__nav--li-04 {
+  margin-right: 9px;
 }
 
 /* #endregion header__nav */
@@ -192,6 +255,16 @@ body {
   font-size: 20px;
   color: #000;
   margin-right: 22px;
+
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.auth-block__sing-in:hover,
+.auth-block__sing-in:focus {
+  background-color: #01996D;
+  color: #fff;
 }
 
 .auth-block__trial-btn {
@@ -208,6 +281,14 @@ body {
   line-height: 125%;
   color: #fff;
   padding-top: 5px;
+
+  transition-property: transform;
+  transition: 0.3s;
+}
+
+.auth-block__trial-btn:hover,
+.auth-block__trial-btn:focus {
+  transform: scale(110%);
 }
 
 /* #endregion auth-block */
@@ -535,6 +616,7 @@ body {
 }
 
 .s03--content-left__btn {
+  cursor: pointer;
   border: none;
   border-radius: 4px;
   width: 240px;
@@ -545,15 +627,24 @@ body {
   font-size: 20px;
   line-height: 125%;
   color: #fff;
+
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.s03--content-left__btn:hover,
+.s03--content-left__btn:focus {
+  transform: scale(110%);
 }
 
 .section-03--content-right {}
 
 .section-03__video {
+  cursor: pointer;
   height: auto;
   width: 100%;
   /* еще больше контроля с max-width */
-  /* max-width: 896px; */
+  max-width: 896px;
 }
 
 /* #endregion Section-03 */
@@ -702,8 +793,7 @@ body {
 /* #endregion section-04 */
 
 /* #region Footer */
-.footer {
-}
+.footer {}
 
 .footer-content {
   background-color: #245852;
@@ -711,11 +801,31 @@ body {
   min-height: 654px;
 }
 
-.footer__logo {
-  margin-bottom: 72px;
+.footer__logo {}
+
+.footer-logo-bg {}
+
+.footer-logo-bg::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background-color: transparent;
+
+  transition-property: all;
+  transition-duration: 0.4s;
 }
 
-.footer__nav {}
+.footer-logo-bg:hover::after,
+.footer-logo-bg:focus::after {
+  background-color: #fff;
+  width: 108px;
+
+}
+
+.footer__nav {
+  margin-top: 73px;
+}
 
 .footer__nav ul li a {
   color: #fff;
@@ -724,7 +834,8 @@ body {
   /*margin-bottom: 60px; /~ у ссылок margin-bottom не сработал, поэтому мы его укажем для li ~/*/
 }
 
-.footer__nav ul li a:hover {
+.footer__nav ul li a:hover,
+.footer__nav ul li a:focus {
   opacity: 0.8;
 }
 
@@ -741,6 +852,5 @@ body {
 .footer__nav ul li:last-child {
   margin-bottom: 0;
 }
-
 
 /* #endregion Footer */
