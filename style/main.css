@@ -250,7 +250,7 @@ body {
   align-items: center;
 }
 
-.auth-block__sing-in {
+.auth-block__sign-in {
   font-weight: 400;
   font-size: 20px;
   color: #000;
@@ -263,8 +263,8 @@ body {
   cursor: pointer;
 }
 
-.auth-block__sing-in:hover,
-.auth-block__sing-in:focus {
+.auth-block__sign-in:hover,
+.auth-block__sign-in:focus {
   background-color: #01996D;
   color: #fff;
 }
@@ -295,74 +295,6 @@ body {
 }
 
 /* #endregion auth-block */
-
-/* #region Модальное окно Sing in */
-/* https://doka.guide/css/backdrop/ */
-#myDialog::backdrop {
-  position: fixed;
-  inset: 0px;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.form_auth_block{
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    background: url(../img/Bubbles.jpg);
-    background-size: cover;
-    border-radius: 4px;
-}
-.form_auth_block_content{
-  padding-top: 15%;
-}
-.form_auth_block_head_text{
-    display: block;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    background: #ffffff;
-    opacity: 0.7;
-}
-.form_auth_block label{
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background: #ffffff;
-    opacity: 0.7;
-    font-weight: 600;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.form_auth_block input{
-  display: block;
-  margin: 0 auto;
-  width: 80%;
-  height: 45px;
-  border-radius: 10px;
-  border:none;
-  outline: none;
-}
-input:focus {
-  color: #000000;
-  border-radius: 10px;
-  border: 2px solid #436fea;
-}
-.form_auth_button{
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    height: 35px;
-    border: none;
-    cursor: pointer;
-}
-::-webkit-input-placeholder {color:#3f3f44; padding-left: 10px;} /* // Это стили для placeholder */
-::-moz-placeholder          {color:#3f3f44; padding-left: 10px;} /* // Это стили для placeholder */
-:-moz-placeholder           {color:#3f3f44; padding-left: 10px;} /* // Это стили для placeholder */
-:-ms-input-placeholder      {color:#3f3f44; padding-left: 10px;} /* // Это стили для placeholder */
-/* #endregion Модальное окно Sing in */
 
 /* #endregion Header */
 
@@ -929,3 +861,36 @@ input:focus {
 }
 
 /* #endregion Footer */
+
+/* #region Модальное окно Sing in */
+/* У элемента диалога есть стандартные браузерные отступы и обводка. А значит их нужно обнулить и поставить на обёртку, чтобы она перекрывала всю «полезную область окна». Иначе клики по отступам тоже будут закрывать модальное окно. */
+.sign-in--dialog {
+  border: none;
+  padding: 0;
+}
+
+/* https://doka.guide/css/backdrop/ */
+#sign-in--dialog::backdrop {
+/*  position: fixed;
+  inset: 0px; */
+  /* это аналогично top: 0;  right: 0;  bottom: 0;  left: 0; это мы неявно заставляем блок тянуться на всю ширину или высоту родителя задав одновременно противоположные свойства */
+  background: rgba(0, 0, 0, 0.7);
+  /* более сильно затемнили задний план */
+}
+
+.sign-in--dialog__form {
+
+}
+
+.sign-in--dialog__input {
+display: block;
+}
+
+.sign-in--dialog__button {
+
+}
+
+
+
+
+/* #endregion Модальное окно Sing in */
