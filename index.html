@@ -20,7 +20,8 @@
     <header class="header" id="top">
         <div class="container-w1370--common">
             <div class="header-content">
-                <div class="logo-bg"><a href="https://tutevgen1984.github.io/site_2_portfolio/"><img class="header__top-logo" src="img/top__logo.svg" alt="top__logo"></a></div>
+                <div class="logo-bg"><a href="https://tutevgen1984.github.io/site_2_portfolio/"><img
+                            class="header__top-logo" src="img/top__logo.svg" alt="top__logo"></a></div>
                 <nav class="header__nav">
                     <ul>
                         <li class="header__nav--li-01"><a class="header__nav-a" href="#">Why Alivio</a></li>
@@ -30,12 +31,28 @@
                     </ul>
                 </nav>
                 <div class="header--auth-block">
-                    <a class="auth-block__sing-in" href="#">Sign in</a>
-                    <button class="auth-block__trial-btn">Start Trial</button>
+                    <button class="auth-block__sing-in" type="button" onclick="window.myDialog.showModal()">Sign in</button>
+                    <button class="auth-block__trial-btn" type="button">Start Trial</button>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- #region Модальное окно Sing in -->
+    <dialog class="form_auth_block" id="myDialog">
+            <div class="form_auth_block_content">
+                <p class="form_auth_block_head_text">Авторизация</p>
+                <form class="form_auth_style" action="#" method="post">
+                    <label>Введите Ваш имейл</label>
+                    <input type="email" name="auth_email" placeholder="Введите Ваш имейл" required>
+                    <label>Введите Ваш пароль</label>
+                    <input type="password" name="auth_pass" placeholder="Введите пароль" required>
+                    <button class="form_auth_button" type="submit" name="form_auth_submit">Войти</button>
+                </form>
+            </div>
+    </dialog>
+    <!-- #endregion Модальное окно Sing in -->
+
     <!-- #endregion Header -->
 
     <!-- #region Main -->
@@ -52,7 +69,7 @@
                         <p>Everyone experiences stress in different ways. Let Alivio guide you, in a personalized
                             journal
                             experience, to overcome your stress.</p>
-                        <button class="btn--find-your-way--common">Find Your Way</button>
+                        <button class="btn--find-your-way--common" type="button">Find Your Way</button>
                     </div>
                 </div>
             </div>
@@ -132,7 +149,7 @@
                                 <h3 class="s03--content-left__h3">
                                     See how well Alivio works in a real customer’s life.
                                 </h3>
-                                <button class="s03--content-left__btn">Let’s get started</button>
+                                <button class="s03--content-left__btn" type="button">Let’s get started</button>
                             </div>
 
                             <div class="section-03--content-right">
@@ -173,9 +190,10 @@
                         <h3 class="s04--content-right__h3">Our product</h3>
                         <h1 class="s04--content-right__h1">You tell us your stress,<br> We make your diary</h1>
                         <p class="s04--content-right__p">
-                            Everyone experiences it, and in different ways.<br> Let Alivio guide you, in a personalized journal experience, to<br> overcome your stress.
+                            Everyone experiences it, and in different ways.<br> Let Alivio guide you, in a personalized
+                            journal experience, to<br> overcome your stress.
                         </p>
-                        <button class="btn--find-your-way--common">Find Your Way</button>
+                        <button class="btn--find-your-way--common" type="button">Find Your Way</button>
                     </div>
                 </div>
             </div>
@@ -190,7 +208,8 @@
         <div class="container-w1920--common">
             <div class="footer-content">
                 <div class="container-w1370--common">
-                    <div class="footer-logo-bg"><a href="#top"><img class="footer__logo" src="img/bottom-logo.svg" alt="Alivio-logo"></a></div>
+                    <div class="footer-logo-bg"><a href="#top"><img class="footer__logo" src="img/bottom-logo.svg"
+                                alt="Alivio-logo"></a></div>
                     <nav class="footer__nav">
                         <ul>
                             <li><a href="#">Why Alivio</a></li>
@@ -204,7 +223,7 @@
         </div>
 
     </footer>
-    <!-- #endregion -->
+    <!-- #endregion Footer -->
 </body>
 
 </html>

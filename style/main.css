@@ -125,6 +125,7 @@ body {
   border: none;
   cursor: pointer;
 
+  font-family: "Lato", sans-serif;
   color: #fff;
   font-weight: 400;
   font-size: 20px;
@@ -250,15 +251,16 @@ body {
 }
 
 .auth-block__sing-in {
-  text-decoration: none;
   font-weight: 400;
   font-size: 20px;
   color: #000;
   margin-right: 22px;
 
-  display: block;
   padding: 5px;
   border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .auth-block__sing-in:hover,
@@ -276,6 +278,7 @@ body {
   cursor: pointer;
 
   color: #fff;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 125%;
@@ -293,6 +296,73 @@ body {
 
 /* #endregion auth-block */
 
+/* #region Модальное окно Sing in */
+/* https://doka.guide/css/backdrop/ */
+#myDialog::backdrop {
+  position: fixed;
+  inset: 0px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.form_auth_block{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(../img/Bubbles.jpg);
+    background-size: cover;
+    border-radius: 4px;
+}
+.form_auth_block_content{
+  padding-top: 15%;
+}
+.form_auth_block_head_text{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #ffffff;
+    opacity: 0.7;
+}
+.form_auth_block label{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #ffffff;
+    opacity: 0.7;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.form_auth_block input{
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 45px;
+  border-radius: 10px;
+  border:none;
+  outline: none;
+}
+input:focus {
+  color: #000000;
+  border-radius: 10px;
+  border: 2px solid #436fea;
+}
+.form_auth_button{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+::-webkit-input-placeholder {color:#3f3f44; padding-left: 10px;} /* // Это стили для placeholder */
+::-moz-placeholder          {color:#3f3f44; padding-left: 10px;} /* // Это стили для placeholder */
+:-moz-placeholder           {color:#3f3f44; padding-left: 10px;} /* // Это стили для placeholder */
+:-ms-input-placeholder      {color:#3f3f44; padding-left: 10px;} /* // Это стили для placeholder */
+/* #endregion Модальное окно Sing in */
 
 /* #endregion Header */
 
@@ -329,6 +399,10 @@ body {
   color: #484848;
   line-height: 145%;
   margin-bottom: 52px;
+}
+
+.btn--find-your-way--common {
+  font-family: "Lato", sans-serif;
 }
 
 /* #endregion Section-01 */
@@ -623,6 +697,7 @@ body {
   height: 65px;
   background: #01996d;
 
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 125%;
