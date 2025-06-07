@@ -218,6 +218,9 @@
     <dialog id="sign-in--dialog" aria-labelledby="sign-in--dialog__heading">
         <!-- дополнительная обертка для отлова клика вне окна -->
         <div class="sign-in--dialog__wrapper">
+
+            <!-- Кнопка закрывающая с помощью JavaScript -->
+            <button class="sign-in--dialog__close-btn" type="button" onclick="window[`sign-in--dialog`].close()">&times;</button>
             <h2 id="sign-in--dialog__heading">Авторизация</h2>
             <form class="sign-in--dialog__form" action="#" method="dialog">
                 <label>Введите Ваш имейл
@@ -233,13 +236,16 @@
     <!-- #endregion Модальное окно Sing in -->
 
     <script>
-        /* подцепляемся к модальному окну */
+        /* подцепляемся к модальному окну, слушаем клик и выполняем функцию */
         document.querySelector('dialog').addEventListener("click", closeOnBackDropClick);
 
         /* функция, которая будет закрывать модальное окно если пользователь кликнет по backdrop (подложка, оверлей) */
         function closeOnBackDropClick({ currentTarget, target }) {
-            console.log('работает функция');
+            console.log('currentTarget = ', currentTarget);
+            console.log('target = ', target);
             const dialogElement = currentTarget;
+            /* currentTarget всегда будет элементом, к которому привязан обработчик. То есть элементом, на котором вызывался addEventListener(). */
+
             const isClickedOnBackDrop = target === dialogElement;
             if (isClickedOnBackDrop) {
                 dialogElement.close();
