@@ -92,6 +92,10 @@ p {
 
 /* #region Общие стили */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
