@@ -649,9 +649,8 @@ body {
 .section-03__video {
   cursor: pointer;
   height: auto;
-  width: 100%;
-  /* еще больше контроля с max-width */
-  max-width: 896px;
+  height: 100%;
+  max-height: 517px;
 }
 
 /* #endregion Section-03 */
@@ -862,21 +861,25 @@ body {
 
 .footer__link {
   display: inline-block;
-  position: relative;
   color: #fff;
 }
 
 .footer__link::after {
   content: "";
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+
+  display: grid;
+  justify-self: center;
+
   width: 0;
   height: 2px;
   background-color: #fff;
   transition: width 0.3s;
+
+  /* Старый способ центрирования: */
+  /* display: block; */
+  /* position: relative; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
 
 .footer__link:hover::after {
