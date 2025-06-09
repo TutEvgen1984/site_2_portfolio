@@ -216,26 +216,35 @@
 
     <!-- #region Модальное окно Sign in -->
     <dialog id="sign-in--dialog" aria-labelledby="sign-in--dialog__heading">
+        <div class="sign-in--dialog__close-wrapper">
+            <button class="sign-in--dialog__close-btn" type="button"
+                onclick="window[`sign-in--dialog`].close()">&times;</button>
+        </div>
+
         <!-- дополнительная обертка для отлова клика вне окна -->
-        <div class="sign-in--dialog__wrapper">
+        <div class="sign-in--dialog__form-wrapper">
 
             <!-- Кнопка закрывающая с помощью JavaScript -->
-            <button class="sign-in--dialog__close-btn" type="button" onclick="window[`sign-in--dialog`].close()">&times;</button>
-            <h2 id="sign-in--dialog__heading">Авторизация</h2>
+
+            <h2 id="sign-in--dialog__heading">Authorization</h2>
             <form class="sign-in--dialog__form" action="#" method="dialog">
-                <label>Введите Ваш имейл
+                <label>Email
                     <input class="sign-in--dialog__input" type="email" name="auth_email"
-                        placeholder="Введите Ваш имейл"></label>
-                <label>Введите Ваш пароль
+                        placeholder="Enter Your Email"></label>
+                <label>Password
                     <input class="sign-in--dialog__input" type="password" name="auth_pass"
-                        placeholder="Введите пароль"></label>
-                <button class="sign-in--dialog__button" type="submit" name="form_auth_submit">Войти</button>
+                        placeholder="Enter Your Password"></label>
+                <input id="sign-in--dialog__checkbox" name="sign-in--dialog__checkbox"
+                    type="checkbox">
+                <label for="sign-in--dialog__checkbox">Remember me</label>
+                <button class="sign-in--dialog__btn-login" type="submit" name="form_auth_submit">Login</button>
             </form>
         </div>
     </dialog>
-    <!-- #endregion Модальное окно Sing in -->
+    <!-- #endregion Модальное окно Sign in -->
 
     <script>
+         /* Ниже скрипт, который закрывает модалку по клику на BackDrop. Этот скрипт скоро может быть не нужен так как появились (в экспериментальном режиме) специальыне атрибуты closedby="none" — юзер ничего не закроет сам. closedby="closerequest" — закрывается при нажатии клавиши ESC (или другого триггера закрытия). closedby="any" — модалка закрывается по клику снаружи или ESC */
         /* подцепляемся к модальному окну, слушаем клик и выполняем функцию */
         document.querySelector('dialog').addEventListener("click", closeOnBackDropClick);
 
@@ -251,6 +260,12 @@
                 dialogElement.close();
             }
         }
+
+         document.querySelector('.sign-in--dialog__btn-login').addEventListener("click", btn_login);
+
+         function btn_login () {
+            alert("Вы вошли на сайт");
+         }
     </script>
 </body>
 

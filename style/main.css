@@ -862,11 +862,15 @@ body {
 
 /* #endregion Footer */
 
-/* #region Модальное окно Sing in */
+/* #region Модальное окно Sign in */
+
 /* У элемента диалога есть стандартные браузерные отступы и обводка. А значит их нужно обнулить и поставить на обёртку, чтобы она перекрывала всю «полезную область окна». Иначе клики по отступам тоже будут закрывать модальное окно. */
 #sign-in--dialog {
   border: none;
   padding: 0;
+  border-radius: 5px;
+  background: #e1b7b7;
+  background: linear-gradient(157deg, #e1b7b7 47%, #ff7700 75%);
 }
 
 /* https://doka.guide/css/backdrop/ */
@@ -876,30 +880,52 @@ body {
   /* это аналогично top: 0;  right: 0;  bottom: 0;  left: 0; это мы неявно заставляем блок тянуться на всю ширину или высоту родителя задав одновременно противоположные свойства */
   background: rgba(0, 0, 0, 0.7);
   /* более сильно затемнили задний план */
+ /*  animation: fade-in 3.3s; */
 }
 
-.sign-in--dialog__wrapper {
-  padding: 15px;
+.sign-in--dialog__close-wrapper {
+  text-align: right;
+  padding: 5px;
 }
 
 .sign-in--dialog__close-btn {
-
-  float: right;
+  font-size: 25px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
 }
+
+.sign-in--dialog__close-btn:hover {
+  background-color: #fff;
+  transform: scale(110%);
+}
+
+.sign-in--dialog__form-wrapper {
+  padding: 0 25px 25px 25px;
+}
+
+#sign-in--dialog__heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 
 .sign-in--dialog__form {
 
 }
 
 .sign-in--dialog__input {
-display: block;
+  display: block;
+  margin-bottom: 15px;
 }
 
-.sign-in--dialog__button {
-
+.sign-in--dialog__btn-login {
+  display: block;
+  margin-top: 15px;
+  transition-duration: 0.3s;
 }
 
+.sign-in--dialog__btn-login:hover {
+  transform: scale(110%);
+}
 
-
-
-/* #endregion Модальное окно Sing in */
+/* #endregion Модальное окно Sign in */
