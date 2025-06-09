@@ -860,6 +860,29 @@ body {
   margin-bottom: 0;
 }
 
+.footer__link {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+
+.footer__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.footer__link:hover::after {
+  width: 100%;
+}
+
 /* #endregion Footer */
 
 /* #region Модальное окно Sign in */
