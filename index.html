@@ -20,21 +20,21 @@
     <header class="header" id="top">
         <div class="container-w1370--common">
             <div class="header-content">
-                <div class="logo-bg"><a href="https://tutevgen1984.github.io/site_2_portfolio/"><img
+                <div class="logo-bg"><a href="https://tutevgen1984.github.io/site_2_portfolio/" title="https://tutevgen1984.github.io/site_2_portfolio/"><img
                             class="header__top-logo" src="img/top__logo.svg" alt="top__logo"></a></div>
                 <nav class="header__nav">
                     <ul>
-                        <li class="header__nav--li-01"><a class="header__nav-a" href="#section_01">Why Alivio</a></li>
-                        <li class="header__nav--li-02"><a class="header__nav-a" href="#section_02">Solutions</a></li>
-                        <li class="header__nav--li-03"><a class="header__nav-a" href="#section_03">Community</a></li>
-                        <li class="header__nav--li-04"><a class="header__nav-a" href="#section_04">Pricing</a></li>
+                        <li class="header__nav--li-01"><a class="header__nav-a" href="#section_01" title="Go to section_01">Why Alivio</a></li>
+                        <li class="header__nav--li-02"><a class="header__nav-a" href="#section_02" title="Go to section_02">Solutions</a></li>
+                        <li class="header__nav--li-03"><a class="header__nav-a" href="#section_03" title="Go to section_03">Community</a></li>
+                        <li class="header__nav--li-04"><a class="header__nav-a" href="#section_04" title="Go to section_04">Pricing</a></li>
                     </ul>
                 </nav>
                 <div class="header--auth-block">
                     <!-- Щелчок по кнопке запустит модальное окно "sign-in--dialog" -->
-                    <button class="auth-block__sign-in" type="button"
+                    <button class="auth-block__sign-in" type="button" title="Unhide dialog-modal"
                         onclick="window['sign-in--dialog'].showModal()">Sign in</button>
-                    <button class="auth-block__trial-btn" type="button" onclick="fn_trial_btn()">Start Trial</button>
+                    <button class="auth-block__trial-btn" type="button" title="No destination. Only popup">Start Trial</button>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                     <p>Everyone experiences stress in different ways. Let Alivio guide you, in a personalized
                         journal
                         experience, to overcome your stress.</p>
-                    <button class="btn--find-your-way--common" type="button">Find Your Way</button>
+                    <button class="btn--find-your-way--common" type="button" title="No destination. Only popup">Find Your Way</button>
                 </div>
             </div>
             <!-- </div> -->
@@ -138,11 +138,11 @@
                             <h3 class="s03--content-left__h3">
                                 See how well Alivio works in a real customer’s life.
                             </h3>
-                            <button class="s03--content-left__btn" type="button">Let’s get started</button>
+                            <button class="s03--content-left__btn" type="button" title="No destination. Only popup">Let’s get started</button>
                         </div>
 
                         <div class="section-03--content-right">
-                            <video class="section-03__video" controls poster="img/video.svg">
+                            <video class="section-03__video" controls poster="img/video.svg" title="Press to view video">
                                 <source src="video/MONDAY MOVES shorts (360p).mp4" type="video/mp4">
                                 Ваш браузер не поддерживает встроенные видео :(
                             </video>
@@ -182,7 +182,7 @@
                         Everyone experiences it, and in different ways.<br> Let Alivio guide you, in a personalized
                         journal experience, to<br> overcome your stress.
                     </p>
-                    <button class="btn--find-your-way--common" type="button">Find Your Way</button>
+                    <button class="btn--find-your-way--common" type="button" title="No destination. Only popup">Find Your Way</button>
                 </div>
             </div>
             <!-- </div> -->
@@ -197,14 +197,14 @@
         <!-- <div class="container-w1920--common"> -->
         <div class="footer-content">
             <div class="container-w1370--common">
-                <div class="footer-logo-bg"><a href="#top"><img class="footer__logo" src="img/bottom-logo.svg"
+                <div class="footer-logo-bg"><a href="#top" title="To #top"><img class="footer__logo" src="img/bottom-logo.svg"
                             alt="Alivio-logo"></a></div>
                 <nav class="footer__nav">
                     <ul>
-                        <li><a class="footer__link" href="#section_01">Why Alivio</a></li>
-                        <li><a class="footer__link" href="#section_02">Solutions</a></li>
-                        <li><a class="footer__link" href="#section_03">Community</a></li>
-                        <li><a class="footer__link" href="#section_04">Pricing</a></li>
+                        <li><a class="footer__link" href="#section_01" title="To section_01">Why Alivio</a></li>
+                        <li><a class="footer__link" href="#section_02" title="To section_02">Solutions</a></li>
+                        <li><a class="footer__link" href="#section_03" title="To section_03">Community</a></li>
+                        <li><a class="footer__link" href="#section_04" title="To section_04">Pricing</a></li>
                     </ul>
                 </nav>
             </div>
@@ -242,47 +242,7 @@
     </dialog>
     <!-- #endregion Модальное окно Sign in -->
 
-    <script>
-        /* Ниже скрипт, который закрывает модалку по клику на BackDrop. Этот скрипт скоро может быть не нужен так как появились (в экспериментальном режиме) специальыне атрибуты closedby="none" — юзер ничего не закроет сам. closedby="closerequest" — закрывается при нажатии клавиши ESC (или другого триггера закрытия). closedby="any" — модалка закрывается по клику снаружи или ESC */
-        /* подцепляемся к модальному окну, слушаем клик и выполняем функцию */
-        document.querySelector('dialog').addEventListener("click", closeOnBackDropClick);
-
-        /* функция, которая будет закрывать модальное окно если пользователь кликнет по backdrop (подложка, оверлей) */
-        function closeOnBackDropClick({ currentTarget, target }) {
-            console.log('currentTarget = ', currentTarget);
-            console.log('target = ', target);
-            const dialogElement = currentTarget;
-            /* currentTarget всегда будет элементом, к которому привязан обработчик. То есть элементом, на котором вызывался addEventListener(). */
-
-            const isClickedOnBackDrop = target === dialogElement;
-            if (isClickedOnBackDrop) {
-                dialogElement.close();
-            }
-        }
-
-        document.querySelector('.sign-in--dialog__btn-login').addEventListener("click", btn_login);
-
-        function btn_login() {
-            alert("Вы вошли на сайт");
-        }
-
-        function fn_trial_btn() {
-            // alert('click!');
-            // К сожалению, прямое взаимодействие с псевдоэлементами ::before и ::after через JavaScript или jQuery невозможно, так как они не являются частью DOM.
-            let style = document.createElement('style');
-            style.innerHTML = `
-              .auth-block__trial-btn:after {
-                display: block;
-                }
-                `   ;
-
-            document.head.appendChild(style);
-
-            setTimeout(() => style.remove(), 1000);
-
-        }
-
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

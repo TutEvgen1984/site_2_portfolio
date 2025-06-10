@@ -276,6 +276,7 @@ body {
 .auth-block__trial-btn {
   display: grid;
   place-self: center;
+
   width: 183px;
   height: 52px;
   border-radius: 4px;
@@ -283,6 +284,7 @@ body {
   border: none;
   cursor: pointer;
 
+  display: relative;
   color: #fff;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -299,12 +301,15 @@ body {
   transform: scale(110%);
 }
 
-.auth-block__trial-btn:after {
-  content: 'Вы нажали кнопку "Start Trial"';
-  display: none;
-  position: relative;
-  top: 15px;
-  transition: 0.1s;
+/* Всплывающее сообщение о нажатии кнопки */
+/* класса изначально нет, он появляется после нажатия кнопки с помощью JS */
+.auth-block__trial-btn--popup:after {
+  content: 'You pressed "Start Trial"';
+  display: block;
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  transition: 0.5s;
   color: #000;
   background-color: #e9a333;
   padding: 10px;
@@ -350,8 +355,19 @@ body {
   margin-bottom: 52px;
 }
 
-.btn--find-your-way--common {
-  font-family: "Lato", sans-serif;
+/* сигнализация о нажатии кнопки вкл. из JS */
+.btn--find-your-way--common--popup:after {
+  content: 'You pressed "Find Your Way"';
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 65px;
+  left: 0px;
+  transition: 0.5s;
+  color: #000;
+  background-color: #e9a333;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* #endregion Section-01 */
@@ -654,6 +670,21 @@ body {
 
   transition-property: all;
   transition-duration: 0.3s;
+}
+
+/* сигнализация о нажатии кнопки вкл. из JS */
+.s03--content-left__btn--popup:after {
+  content: 'You pressed "Let’s get started"';
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 65px;
+  left: 0px;
+  transition: 0.5s;
+  color: #000;
+  background-color: #e9a333;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .s03--content-left__btn:hover,
