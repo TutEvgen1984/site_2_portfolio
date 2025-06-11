@@ -1,7 +1,9 @@
 /* #region  Обработчики кнопок */
 /* Звук для кнопок */
-var audio1 = new Audio('../audio/knopka-klik-myagkii-blizkii-nizkii.mp3');
-var audio2 = new Audio('../audio/knopka-klik-shumnyii-blizkii-zvonkii.mp3');
+/* var audio1 = new Audio('../audio/knopka-klik-myagkii-blizkii-nizkii.mp3');
+var audio2 = new Audio('../audio/knopka-klik-shumnyii-blizkii-zvonkii.mp3'); */
+var audio1 = new Audio('knopka-klik-myagkii-blizkii-nizkii.mp3');
+var audio2 = new Audio('knopka-klik-shumnyii-blizkii-zvonkii.mp3');
 /* Создали скрытый звук */
 
 // К сожалению, прямое взаимодействие с псевдоэлементами ::before и ::after через JavaScript или jQuery невозможно, так как они не являются частью DOM.
