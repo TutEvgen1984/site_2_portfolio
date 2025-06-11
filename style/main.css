@@ -159,6 +159,12 @@ body {
   gap: 15px;
 }
 
+.logo-group {
+  display: flex;
+}
+
+/* #region Logo_top */
+
 .logo-bg {
   padding-top: 5px;
   padding-right: 5px;
@@ -190,10 +196,28 @@ body {
   opacity: 0.7;
 }
 
+/* #endregion Logo_top */
+
+/* #region Кнопка zoom-out */
+.header__zoom-out {
+  padding: 0;
+  display: grid;
+  place-self: center;
+  transition: 0.3s;
+}
+
+.header__zoom-out:hover {
+  transform: scale(110%);
+}
+
+/* #endregion Кнопка zoom-out */
+
 
 /* #region header__nav */
 
 .header__nav {
+  position: relative;
+  left: -10px;
   max-width: 686px;
   width: 100%;
   padding-right: 118px;
@@ -258,7 +282,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #000;
-  margin-right: 22px;
+  margin-right: 16px;
 
   padding: 5px;
   border-radius: 5px;
@@ -878,7 +902,7 @@ body {
 }
 
 .footer__nav {
-  margin-top: 73px;
+  margin-top: 69px;
 }
 
 .footer__nav ul li a {
@@ -900,7 +924,7 @@ body {
 }
 
 .footer__nav ul li {
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 .footer__nav ul li:last-child {
@@ -949,12 +973,12 @@ body {
 
 /* https://doka.guide/css/backdrop/ */
 #sign-in--dialog::backdrop {
-/*  position: fixed;
+  /*  position: fixed;
   inset: 0px; */
   /* это аналогично top: 0;  right: 0;  bottom: 0;  left: 0; это мы неявно заставляем блок тянуться на всю ширину или высоту родителя задав одновременно противоположные свойства */
   background: rgba(0, 0, 0, 0.7);
   /* более сильно затемнили задний план */
- /*  animation: fade-in 3.3s; */
+  /*  animation: fade-in 3.3s; */
 }
 
 .sign-in--dialog__close-wrapper {
@@ -983,9 +1007,7 @@ body {
 }
 
 
-.sign-in--dialog__form {
-
-}
+.sign-in--dialog__form {}
 
 .sign-in--dialog__input {
   display: block;
