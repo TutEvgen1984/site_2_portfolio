@@ -7,34 +7,43 @@ var audio2 = new Audio('audio/knopka-klik-shumnyii-blizkii-zvonkii.mp3');
 // К сожалению, прямое взаимодействие с псевдоэлементами ::before и ::after через JavaScript или jQuery невозможно, так как они не являются частью DOM.
 
 /* #region  Кнопка zoom-out */
+
 document.querySelector('.header__zoom-out').addEventListener("click", function () {
   /* Одноразовое проигрывание звука */
   audio1.play();
+
+  /* Вкл/выкл красного фона */
+  this.classList.toggle('bgc-red');
+
+  /* Создадим массив из всех элементов с классом zoom-out--target */
+  let arr_of_w1920 = document.querySelectorAll('.zoom-out--target');
+  /* Получили массив из 4-х dom-элементов */
+
+  /* Вкл/выкл класс отвечающий за ограничение контейнером шириной 1920px содержимое*/
+  for (let i = 0; i < arr_of_w1920.length; i++ ) {
+    arr_of_w1920[i].classList.toggle('container-w1920--common');
+  }
 })
 /* #endregion Кнопка zoom-out */
 
 /* #region  Кнопки навигации */
 /* Кнопка №1 "Why Alivio"  */
 document.querySelectorAll('.header__nav-a')[0].addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio2.play();
 });
 
 /* Кнопка №2 "Solutions" */
 document.querySelectorAll('.header__nav-a')[1].addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio2.play();
 });
 
 /* Кнопка №3 "Community" */
 document.querySelectorAll('.header__nav-a')[2].addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio2.play();
 });
 
 /* Кнопка №4 "Pricing" */
 document.querySelectorAll('.header__nav-a')[3].addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio2.play();
 });
 
@@ -45,7 +54,6 @@ document.querySelector('.auth-block__sign-in').addEventListener("click", functio
   /* Показать dialog в виде модального окна */
   document.querySelector('#sign-in--dialog').showModal();
 
-  /* Одноразовое проигрывание звука */
   audio1.play();
 })
 
@@ -67,10 +75,14 @@ function closeOnBackDropClick({ currentTarget, target }) {
   }
 }
 
+/* Кнопка Close в модальном окне */
+document.querySelector('.sign-in--dialog__close-btn').addEventListener("click", function () {
+  audio2.play();
+});
+
 /* Кнопка Login в модальном окне */
 document.querySelector('.sign-in--dialog__btn-login').addEventListener("click", function () {
-  /* Одноразовое проигрывание звука */
-  audio1.play();
+  audio2.play();
   alert("Вы вошли на сайт");
 });
 
@@ -82,7 +94,6 @@ document.querySelector('.sign-in--dialog__btn-login').addEventListener("click", 
 
 const trial_btn = document.querySelector('.auth-block__trial-btn');
 trial_btn.addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio1.play();
 
   /* Всплывающее сообщение */
@@ -97,7 +108,6 @@ trial_btn.addEventListener('click', function () {
 // Кнопка №1, секция 1
 const find_btn1 = document.querySelectorAll('.btn--find-your-way--common')[0];
 find_btn1.addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio1.play();
 
   /* Всплывающее сообщение */
@@ -108,7 +118,6 @@ find_btn1.addEventListener('click', function () {
 // Кнопка №2, секция 4
 const find_btn2 = document.querySelectorAll('.btn--find-your-way--common')[1];
 find_btn2.addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio1.play();
 
   /* Всплывающее сообщение */
@@ -139,25 +148,21 @@ document.querySelector('.footer-logo--a').addEventListener('click', function () 
 /* #region  Footer_nav */
 /* Кнопка №1 "Why Alivio"  */
 document.querySelectorAll('.footer__link')[0].addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio2.play();
 });
 
 /* Кнопка №2 "Solutions"  */
 document.querySelectorAll('.footer__link')[1].addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio2.play();
 });
 
 /* Кнопка №3 "Community"  */
 document.querySelectorAll('.footer__link')[2].addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio2.play();
 });
 
 /* Кнопка №4 "Pricing"  */
 document.querySelectorAll('.footer__link')[3].addEventListener('click', function () {
-  /* Одноразовое проигрывание звука */
   audio2.play();
 });
 

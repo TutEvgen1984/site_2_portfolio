@@ -204,10 +204,16 @@ body {
   display: grid;
   place-self: center;
   transition: 0.3s;
+  border-radius: 5px;
 }
 
 .header__zoom-out:hover {
   transform: scale(110%);
+}
+
+/* класс, который будем включать после нажатия кнопки */
+.bgc-red {
+  background-color: red;
 }
 
 /* #endregion Кнопка zoom-out */
@@ -718,11 +724,21 @@ body {
 
 .section-03--content-right {}
 
+/* Свойства видео */
 .section-03__video {
   cursor: pointer;
+  /* Подгоняем высоту видео под высоту постера */
   height: auto;
   height: 100%;
   max-height: 517px;
+  /* 517px - это высота постера */
+}
+
+/* Свойства постера для видео */
+.section-03__video[poster] {
+  /* Адаптивный постер видео */
+  width: 100%;
+  max-width: 896px;
 }
 
 /* #endregion Section-03 */
